@@ -7,26 +7,19 @@ int i, size;
 int value = 0;
 
 
-class solution
-{
-    public:
-        int RemoveDuplicate(vector<int>vec)
-        {
-            for(i = 0; i < vec.size(); i++)
-            {
-                if(vec[i] == i+1)
-                {
-                    
-                } 
+class Solution {
+public:
+    int removeDuplicates(vector<int>& vec) {
+        if (vec.empty()) return 0;
+        int j = 0;
+        for (int i = 1; i < vec.size(); ++i) {
+            if (vec[i] != vec[j]) {
+                j++;
+                vec[j] = vec[i];
             }
-            for( i = 0; i < vec.size(); i++)
-            {
-              cout<<vec[i];  
-            }
-
-            return 0;
         }
-            
+        return j + 1;
+    }
 };
 
 int main()
@@ -43,8 +36,8 @@ int main()
         value = 0;
     }
 
-    solution  sol;
-    sol.RemoveDuplicate(vec);
+    Solution  sol;
+    sol.removeDuplicates(vec);
 
     return 0;
 }
