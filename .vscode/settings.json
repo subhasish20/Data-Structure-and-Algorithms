@@ -1,8 +1,0 @@
-{
-    "files.associations": {
-        "*.dbclient-js": "javascript",
-        "algorithm": "cpp",
-        "array": "c",
-        "string": "c"
-    }
-}
