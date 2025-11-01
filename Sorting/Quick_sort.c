@@ -59,7 +59,7 @@ int main()
     }
 
     QuickSort(A, 0, n-1);
-    printf("The sorted array is :");
+    printf("The sorted array is :\n");
     for ( i = 0; i < n; i++)
     {
         printf("    %d  ",A[i]);
