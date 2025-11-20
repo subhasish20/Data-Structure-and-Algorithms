@@ -45,7 +45,7 @@ void DisplayList()
         temp = temp->next;              // move to next node
     }
 
-    printf("NULL\n");
+    printf("\n");
 }
 
 
