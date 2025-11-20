@@ -18,11 +18,13 @@ int insertAtBegining(int value)
     struct Node* newNode = (struct Node*)malloc(sizeof(struct Node));
 
     // store value in the node
-    newNode->data = value;
+    newNode->data = value;  
     // link new node to current head
     newNode->next = head;
     // update head to new node
     head = newNode;
+
+    return 0;
 }
 
 
