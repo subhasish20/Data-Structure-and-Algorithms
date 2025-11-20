@@ -59,7 +59,6 @@ void DisplayList()
     printf("\n");        // end of list
 }
 
-s
 void freeList()
 {
     struct Node* temp;
