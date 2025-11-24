@@ -1,92 +1,62 @@
-#include<stdio.h>
-#define MAX_SIZE 100
+#include <iostream>
+#include <stack>
+using namespace std;
 
-int stack[MAX_SIZE];
-int top = -1;
-int n;
+int main() {
+    stack<int> s;
+    int n, ch, element;
 
+    cout << "-------------Welcome to Stack Data Structure----------------" << endl;
+    cout << "Enter the size of the stack: ";
+    cin >> n;
 
-int PUSH()
-{
-    int element;
-    if(top >= n - 1)
-    {
-        printf("Stack overflow !!");
-    }
-    else 
-    {
-    printf("Enter the element to push :");
-    scanf("%d",&element);
-    top++;
-    stack[top] = element;
-    printf("%d pushed to stack\n",element);
-    }
+    do {
+        cout << "---------------Stack menu---------------" << endl;
+        cout << "Press 1 : PUSH" << endl;
+        cout << "Press 2 : POP" << endl;
+        cout << "Press 3 : DISPLAY" << endl;
+        cout << "Press 4 : Exit" << endl;
+        cout << "Enter your choice: ";
+        cin >> ch;
 
-    return 0;
-}
-int POP()
-{
-    if(top == -1)
-    {
-        printf("Stack underflow !!\n");
-    }
-    else
-    {
-        printf("%d popped successfully !!\n",stack[top]);
-        top--;
-    }
-
-    return 0;
-}
-
-int DISPLAY()
-{
-    int i;
-    if(top == -1)
-    {
-        printf("stack is empty !!");
-    }
-    else 
-    {
-        printf("The elements of the stack are :\n");
-        for(i = top; i >= 0; i--)
-        {
-            printf("%d\n",stack[i]);
+        switch(ch) {
+            case 1:
+                if (s.size() >= n) {
+                    cout << "Stack overflow !!" << endl;
+                } else {
+                    cout << "Enter the element to push: ";
+                    cin >> element;
+                    s.push(element);
+                    cout << element << " pushed to stack" << endl;
+                }
+                break;
+            case 2:
+                if (s.empty()) {
+                    cout << "Stack underflow !!" << endl;
+                } else {
+                    cout << s.top() << " popped successfully !!" << endl;
+                    s.pop();
+                }
+                break;
+            case 3:
+                if (s.empty()) {
+                    cout << "Stack is empty !!" << endl;
+                } else {
+                    cout << "The elements of the stack are:" << endl;
+                    stack<int> temp = s;  // Create a copy to display elements
+                    while (!temp.empty()) {
+                        cout << temp.top() << endl;
+                        temp.pop();
+                    }
+                }
+                break;
+            case 4:
+                cout << "Exiting the program !! Thank you for visiting again !!" << endl;
+                break;
+            default:
+                cout << "Invalid choice !! Try again....." << endl;
         }
-    }
-    return 0;
-}
-
-int main()
-{
-    int ch;
-    printf("-------------Welcome to Stack Data Structure----------------");
-    printf("\nEnter the size of the stack :");
-    scanf("%d",&n);
-    do
-    {
-        printf("---------------Stack menu---------------");
-        printf("\n Press 1 : PUSH");
-        printf("\n Press 2 : POP");
-        printf("\n Press 3 : DISPLAY");
-        printf("\n Press 4 : Exit");
-        printf("\n Enter your choice :");
-        scanf("%d",&ch);
-
-        switch(ch)
-        {
-            case 1: PUSH();
-            break;
-            case 2: POP();
-            break;
-            case 3: DISPLAY();
-            break;
-            case 4: printf("Exiting the program !! Thank you visit again !!");
-            break;
-            default:printf("Invalid choice !! Try again.....");
-        }
-    }while(ch != 4);
-
+    } while (ch != 4);
 
     return 0;
 }
