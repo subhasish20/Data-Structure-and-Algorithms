@@ -73,7 +73,7 @@ int main()
             case 3:
             if(root->left == NULL)
             {
-                printf("Left sie of the root node does not exits !!");
+                printf("Left side of the root node does not exits !!");
             }
             else if(root->left->left == NULL)
             {
@@ -87,7 +87,7 @@ int main()
             case 4:
             if(root->left == NULL)
             {
-                printf("right sie of the root node does not exits !!");
+                printf("right side of the root node does not exits !!");
             }
             else if(root->left->right == NULL)
             {
@@ -101,7 +101,7 @@ int main()
             case 5:
             if(root->right == NULL)
             {
-                printf("right sie of the root node does not exits !!");
+                printf("right side of the root node does not exits !!");
             }
             else if(root->right->left == NULL)
             {
@@ -115,7 +115,7 @@ int main()
             case 6:
             if(root->right == NULL)
             {
-                printf("right sie of the root node does not exits !!");
+                printf("right side of the root node does not exits !!");
             }
             else if(root->right->right == NULL)
             {
