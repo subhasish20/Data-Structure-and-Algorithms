@@ -33,6 +33,18 @@ int preorder(treeNode* root)
     return 1;
 }
 
+void freeTree(treeNode* root) {
+    if (root == NULL) return;
+    
+    // Recursively free the left and right subtrees first
+    freeTree(root->left);
+    freeTree(root->right);
+    
+    // Free the current node
+    free(root);
+}
+
+
 int main()
 {
     treeNode* root = createNodeNode(10);
@@ -47,6 +59,6 @@ int main()
     printf("The preorder traversal is :\n");
     preorder(root);
 
-
+    freeTree(root);
     return 0;
 }

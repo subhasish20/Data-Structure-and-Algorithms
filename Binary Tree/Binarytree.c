@@ -17,6 +17,18 @@ treeNode* createNode(int value)
     
     return node;
 }
+void freeTree(treeNode* root)
+{
+    if (root == NULL) return;
+
+    // Recursively free the left and right subtrees first
+    freeTree(root->left);
+    freeTree(root->right);
+
+    // Free the current node
+    free(root);
+}
+
 int main()
 {
     treeNode* root = createNode(5);
@@ -42,7 +54,8 @@ int main()
     printf("  %d    %d   %d    %d\n", 
            root->left->left->data, root->left->right->data,
            root->right->left->data, root->right->right->data);
-
+    
+    freeTree(root);
 
     return 0;
 }

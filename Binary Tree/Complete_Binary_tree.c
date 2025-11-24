@@ -44,6 +44,18 @@ int isCompleteBinaryTree(Node* root) {
     return 1;
 }
 
+void freeTree(Node* root) {
+    if (root == NULL) return;
+    
+    // Recursively free the left and right subtrees first
+    freeTree(root->left);
+    freeTree(root->right);
+    
+    // Free the current node
+    free(root);
+}
+
+
 int main() {
     Node* root = createNode(1);
     root->left = createNode(2);
@@ -57,5 +69,6 @@ int main() {
     else
         printf("Tree is NOT a Complete Binary Tree\n");
 
+    freeTree(root);
     return 0;
 }

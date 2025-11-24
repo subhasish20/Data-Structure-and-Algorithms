@@ -18,6 +18,19 @@ struct Node* createNode(int value)
     return node;
 }
 
+void freeTree(struct Node* root)
+{
+    if (root == NULL) return;
+
+    // Recursively free the left and right subtrees first
+    freeTree(root->left);
+    freeTree(root->right);
+
+    // Free the current node
+    free(root);
+}
+
+
 int main()
 {
     printf("----Welcome to Binary Tree Insertion Code---------");
@@ -130,6 +143,6 @@ int main()
         }
     }
     printf("\n Binary tree created successfully");
-
+    freeTree(root);
     return 0;
 }
