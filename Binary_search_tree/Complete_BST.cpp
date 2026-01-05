@@ -58,8 +58,8 @@ class BinarySearchTree
         if (root == NULL) return NULL;
 
         Node* temp = root;
-        while (temp->rchild != NULL) {
-            temp = temp->rchild;
+        while (temp->lchild != NULL) {
+            temp = temp->lchild;
         }
         return temp;
     }
@@ -125,10 +125,9 @@ class BinarySearchTree
         /* Preorder Traversal: Root -> Left -> Right */
     void PreorderTraversal(Node* root)
     {
-    if (root == NULL) {
-        cout << "The tree is empty!" << endl;
-        return;
-    }
+        if (root == NULL)
+            return;
+
         cout << root->data << " "; // for all traversal functions
         PreorderTraversal(root->lchild);
         PreorderTraversal(root->rchild);
@@ -137,10 +136,9 @@ class BinarySearchTree
     /* Inorder Traversal: Left -> Root -> Right */
     void InOrderTraversal(Node* root)
     {
-    if (root == NULL) {
-        cout << "The tree is empty!" << endl;
-        return;
-    }
+        if (root == NULL)
+            return;
+
         InOrderTraversal(root->lchild);
         cout << root->data << " "; // for all traversal functions
         InOrderTraversal(root->rchild);
@@ -149,10 +147,9 @@ class BinarySearchTree
     /* Postorder Traversal: Left -> Right -> Root */
     void PostOrderTraversal(Node* root)
     {
-    if (root == NULL) {
-        cout << "The tree is empty!" << endl;
-        return;
-    }
+        if (root == NULL)
+            return;
+
         PostOrderTraversal(root->lchild);
         PostOrderTraversal(root->rchild);
         cout << root->data << " "; // for all traversal functions
@@ -189,7 +186,6 @@ int main()
         {
             cout<<"Thank you visit again !!";
             bst.FreeAllNode(root);
-            root = NULL;
             exit(0);
         }
 
