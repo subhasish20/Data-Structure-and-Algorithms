@@ -2,9 +2,9 @@
 #define BSTNODE_H
 
 typedef struct node {
-    struct node* LChild;
+    struct node* lchild;
     int data;
-    struct node* RChild;
-}BSTNode;
+    struct node* rchild;
+}Node;
 
 #endif

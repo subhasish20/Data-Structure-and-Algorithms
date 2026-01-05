@@ -7,8 +7,8 @@ TreeNode* CreateTreeNode(int key)
 {
     TreeNode* node = (TreeNode*)malloc(sizeof(TreeNode));
     node->data = key;
-    node->LChild = NULL;
-    node->RChild = NULL;
+    node->lchild = NULL;
+    node->rchild = NULL;
     return node;
 }
 
@@ -18,9 +18,9 @@ void InOrderTraversal(TreeNode* root)
     if (root == NULL)
         return;
 
-    InOrderTraversal(root->LChild);       
+    InOrderTraversal(root->lchild);       
     printf("%d ", root->data);            
-    InOrderTraversal(root->RChild);     
+    InOrderTraversal(root->rchild);     
 }
 
 int main()
@@ -29,14 +29,14 @@ int main()
     TreeNode* root = CreateTreeNode(50);
 
     // Adding children
-    root->LChild = CreateTreeNode(20);
-    root->RChild = CreateTreeNode(70);
+    root->lchild = CreateTreeNode(20);
+    root->rchild = CreateTreeNode(70);
 
-    root->LChild->LChild = CreateTreeNode(10);
-    root->LChild->RChild = CreateTreeNode(30);
+    root->lchild->lchild = CreateTreeNode(10);
+    root->lchild->rchild = CreateTreeNode(30);
 
-    root->RChild->LChild = CreateTreeNode(60);
-    root->RChild->RChild = CreateTreeNode(80);
+    root->rchild->lchild = CreateTreeNode(60);
+    root->rchild->rchild = CreateTreeNode(80);
 
     printf("In-order traversal of the tree: ");
     InOrderTraversal(root);  // Perform in-order traversal

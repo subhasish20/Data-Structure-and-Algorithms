@@ -3,18 +3,18 @@
 
 typedef struct Node
 {
-    struct Node* LChild;
+    struct Node* lchild;
     int data;
-    struct Node* RChild;
+    struct Node* rchild;
 }Node;
 
 Node* CreateNode(int key)
 {
     Node* node = (Node*)malloc(sizeof(Node)); // it will create a node using DMA
 
-    node->LChild = NULL; // make the left chile null
+    node->lchild = NULL; // make the left chile null
     node->data = key; // giving the value to the node
-    node->RChild = NULL;
+    node->rchild = NULL;
 
     return node;
 }

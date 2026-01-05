@@ -9,8 +9,8 @@ static void freeAllNodes(TreeNode* root)
     if (root == NULL)
         return;
 
-    freeAllNodes(root->LChild);
-    freeAllNodes(root->RChild);
+    freeAllNodes(root->lchild);
+    freeAllNodes(root->rchild);
     free(root);
 }
 

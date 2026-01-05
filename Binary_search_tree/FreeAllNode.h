@@ -4,13 +4,13 @@
 #include <stdlib.h>
 #include "BSTNode.h"
 
-static void freeAllNodes(BSTNode* root)
+static void freeAllNodes(Node* root)
 {
     if (root == NULL)
         return;
 
-    freeAllNodes(root->LChild);
-    freeAllNodes(root->RChild);
+    freeAllNodes(root->lchild);
+    freeAllNodes(root->rchild);
     free(root);
 }
 

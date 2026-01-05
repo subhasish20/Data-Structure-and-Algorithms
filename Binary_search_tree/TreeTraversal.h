@@ -5,35 +5,35 @@
 #include "BSTNode.h"
 
 /* Preorder Traversal: Root -> Left -> Right */
-static void PreorderTraversal(BSTNode* root)
+static void PreorderTraversal(Node* root)
 {
     if (root == NULL)
         return;
 
     printf("%d ", root->data);
-    PreorderTraversal(root->LChild);
-    PreorderTraversal(root->RChild);
+    PreorderTraversal(root->lchild);
+    PreorderTraversal(root->rchild);
 }
 
 /* Inorder Traversal: Left -> Root -> Right */
-static void InOrderTraversal(BSTNode* root)
+static void InOrderTraversal(Node* root)
 {
     if (root == NULL)
         return;
 
-    InOrderTraversal(root->LChild);
+    InOrderTraversal(root->lchild);
     printf("%d ", root->data);
-    InOrderTraversal(root->RChild);
+    InOrderTraversal(root->rchild);
 }
 
 /* Postorder Traversal: Left -> Right -> Root */
-static void PostOrderTraversal(BSTNode* root)
+static void PostOrderTraversal(Node* root)
 {
     if (root == NULL)
         return;
 
-    PostOrderTraversal(root->LChild);
-    PostOrderTraversal(root->RChild);
+    PostOrderTraversal(root->lchild);
+    PostOrderTraversal(root->rchild);
     printf("%d ", root->data);
 }
 

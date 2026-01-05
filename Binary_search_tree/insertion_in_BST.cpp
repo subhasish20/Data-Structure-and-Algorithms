@@ -3,37 +3,37 @@
 #include"TreeTraversal.h"
 using namespace std;
 
-BSTNode* CreateNode(int key)
+Node* CreateNode(int key)
 {
-    BSTNode* node = new BSTNode();
+    Node* node = new Node();
 
-    node->LChild = NULL;
+    node->lchild = NULL;
     node->data = key;
-    node->RChild = NULL;
+    node->rchild = NULL;
 
     return node;
 } 
 
-BSTNode* InsertInBST(BSTNode* root, int key)
+Node* InsertInBST(Node* root, int key)
 {
     if (root == nullptr)
         return CreateNode(key);
 
     if (key < root->data)
-        root->LChild = InsertInBST(root->LChild, key);
+        root->lchild = InsertInBST(root->lchild, key);
     else if (key > root->data)
-        root->RChild = InsertInBST(root->RChild, key);
+        root->rchild = InsertInBST(root->rchild, key);
 
-    return root;
+    return root;    
 }
 
-int FreeAllNodes(BSTNode* root)
+int FreeAllNodes(Node* root)
 {
     if(root == NULL)
     return 0;
 
-    FreeAllNodes(root->LChild);
-    FreeAllNodes(root->RChild);
+    FreeAllNodes(root->lchild);
+    FreeAllNodes(root->rchild);
 
     delete root;
 
@@ -49,7 +49,7 @@ int main()
 
     cout<<"Enter the root node :";
     cin>>key;
-    BSTNode* root = CreateNode(key);
+    Node* root = CreateNode(key);
     
     for(i = 1; i < size; i++)
     {

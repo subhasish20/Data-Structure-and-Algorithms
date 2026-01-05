@@ -2,9 +2,9 @@
 #define TREE_NODE_CREATION
 
 typedef struct node {
-    struct node* LChild;
+    struct node* lchild;
     int data;
-    struct node* RChild;
+    struct node* rchild;
 } TreeNode;
 
 #endif
