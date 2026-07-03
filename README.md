@@ -19,6 +19,53 @@ This repository contains implementations of popular **Data Structures** 🏗️ 
 
 # 🛠️ Topics Covered
 
+## 📊 Time Complexity (Detailed Explanation)
+
+Time complexity is used to measure how the runtime of an algorithm increases as the input size **n** grows. It helps us evaluate how efficient an algorithm is before actually implementing it.
+
+Instead of measuring real execution time, we focus on how the number of operations grows with input size.
+
+## 📊 Time Complexity Overview
+
+Time complexity is a way to represent how the running time of an algorithm increases as the input size **n** increases. It helps us understand how efficient an algorithm is and compare different approaches.
+
+The graph below shows the growth rate of different common time complexities:
+
+- **O(1)** → Constant time (best performance, does not depend on input size)
+- **O(log n)** → Logarithmic time (very efficient, reduces problem size each step)
+- **O(n)** → Linear time (grows directly with input size)
+- **O(n log n)** → Efficient sorting algorithms (Merge Sort, Quick Sort average case)
+- **O(n²)** → Quadratic time (nested loops, slower for large inputs)
+- **O(2ⁿ)** → Exponential time (very slow, recursive brute-force problems)
+- **O(n!)** → Factorial time (extremely slow, permutation problems)
+
+---
+
+## 📌 Key Insight
+
+- Lower curves = better performance 🚀  
+- Higher curves = slower algorithms ⚠️  
+- Efficient algorithms aim for **O(n)** or **O(n log n)** complexity
+
+---
+
+## 📈 Visualization
+
+![Time Complexity Graph](assets/time-complexity.png)
+
+---
+
+## 🎯 Why This Matters
+
+Understanding time complexity helps in:
+- Writing optimized code
+- Cracking coding interviews
+- Choosing the right data structure/algorithm
+- Improving problem-solving speed
+
+
+---
+
 ## 📦 Arrays
 
 ### Topics
