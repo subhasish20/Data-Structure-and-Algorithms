@@ -223,18 +223,32 @@ Already supports insertion and deletion from both ends.
 
 ---
 
-## 🌳 Binary Tree
+# 🌳 Trees 
 
-### Topics
+---
+
+## 🌳 Binary Tree (BT)
+
+## Topics
 - Binary Tree Creation
 - Traversals
+- Height of Tree
+- Count Nodes
+- Leaf Nodes
+- Internal Nodes
+- Mirror Tree
+- Diameter
+- Lowest Common Ancestor (LCA)
 
 | Operation | Time Complexity | Space Complexity |
 |-----------|-----------------|------------------|
 | Inorder Traversal | **O(n)** | O(h) |
 | Preorder Traversal | **O(n)** | O(h) |
 | Postorder Traversal | **O(n)** | O(h) |
-| Level Order | **O(n)** | O(n) |
+| Level Order Traversal | **O(n)** | O(n) |
+| Search | **O(n)** | O(h) |
+| Insert (Level Order) | **O(n)** | O(n) |
+| Delete | **O(n)** | O(n) |
 
 > **h = Height of the Tree**
 
@@ -242,25 +256,58 @@ Already supports insertion and deletion from both ends.
 
 ## 🌲 Binary Search Tree (BST)
 
-### Topics
+## Topics
 - Creation
 - Insertion
 - Searching
 - Deletion
+- Minimum & Maximum
+- Predecessor & Successor
+- Validation
+- Traversals
 
 | Operation | Average | Worst |
 |-----------|---------|-------|
 | Search | **O(log n)** | O(n) |
 | Insert | **O(log n)** | O(n) |
 | Delete | **O(log n)** | O(n) |
+| Min / Max | **O(log n)** | O(n) |
+| Successor / Predecessor | **O(log n)** | O(n) |
 
 Space Complexity: **O(h)**
 
 ---
 
-## 🌳 Red-Black Tree
+## 🌳 AVL Tree
 
-### Topics
+## Topics
+- Rotations
+  - LL Rotation
+  - RR Rotation
+  - LR Rotation
+  - RL Rotation
+- Insertion
+- Deletion
+- Searching
+- Balance Factor
+
+| Operation | Time Complexity |
+|-----------|-----------------|
+| Search | **O(log n)** |
+| Insert | **O(log n)** |
+| Delete | **O(log n)** |
+| Rotation | **O(1)** |
+
+Space Complexity: **O(n)**
+
+---
+
+## 🌳 Red-Black Tree (RBT)
+
+## Topics
+- Properties of Red-Black Tree
+- Rotations
+- Recoloring
 - Insertion
 - Deletion
 - Searching
@@ -270,11 +317,171 @@ Space Complexity: **O(h)**
 | Search | **O(log n)** |
 | Insert | **O(log n)** |
 | Delete | **O(log n)** |
+| Rotation | **O(1)** |
 
 Space Complexity: **O(n)**
 
 ---
 
+## 🌳 B-Tree
+
+## Topics
+- Node Structure
+- Order (Degree)
+- Insertion
+- Deletion
+- Searching
+- Splitting
+- Merging
+- Redistribution
+
+| Operation | Time Complexity |
+|-----------|-----------------|
+| Search | **O(log n)** |
+| Insert | **O(log n)** |
+| Delete | **O(log n)** |
+| Traverse | **O(n)** |
+
+Space Complexity: **O(n)**
+
+---
+
+## 🌳 B+ Tree
+
+## Topics
+- Internal Nodes
+- Leaf Nodes
+- Linked Leaves
+- Insertion
+- Deletion
+- Searching
+- Range Queries
+
+| Operation | Time Complexity |
+|-----------|-----------------|
+| Search | **O(log n)** |
+| Insert | **O(log n)** |
+| Delete | **O(log n)** |
+| Range Query | **O(log n + k)** |
+
+> **k = Number of reported elements**
+
+Space Complexity: **O(n)**
+
+---
+
+## 🌳 Trie (Prefix Tree)
+
+## Topics
+- Trie Creation
+- Insert Word
+- Search Word
+- Prefix Search
+- Delete Word
+- Auto-complete
+- Longest Prefix Matching
+
+| Operation | Time Complexity |
+|-----------|-----------------|
+| Insert | **O(m)** |
+| Search | **O(m)** |
+| Delete | **O(m)** |
+| Prefix Search | **O(m)** |
+
+> **m = Length of the word**
+
+Space Complexity: **O(ALPHABET_SIZE × N)**
+
+---
+
+## 🌳 Segment Tree
+
+## Topics
+- Construction
+- Range Sum Query
+- Range Minimum Query (RMQ)
+- Range Maximum Query
+- Point Update
+- Lazy Propagation
+
+| Operation | Time Complexity |
+|-----------|-----------------|
+| Build | **O(n)** |
+| Range Query | **O(log n)** |
+| Point Update | **O(log n)** |
+| Range Update (Lazy) | **O(log n)** |
+
+Space Complexity: **O(4n)**
+
+
+---
+
+## 🌳 Heap (Binary Heap)
+
+## Topics
+- Min Heap
+- Max Heap
+- Heapify
+- Build Heap
+- Heap Sort
+- Priority Queue
+
+| Operation | Time Complexity |
+|-----------|-----------------|
+| Insert | **O(log n)** |
+| Extract Min/Max | **O(log n)** |
+| Peek | **O(1)** |
+| Heapify | **O(log n)** |
+| Build Heap | **O(n)** |
+
+Space Complexity: **O(n)**
+
+---
+
+## 🌳 Splay Tree
+
+## Topics
+- Zig Rotation
+- Zig-Zig Rotation
+- Zig-Zag Rotation
+- Search
+- Insert
+- Delete
+
+| Operation | Amortized Complexity |
+|-----------|----------------------|
+| Search | **O(log n)** |
+| Insert | **O(log n)** |
+| Delete | **O(log n)** |
+
+Worst Case: **O(n)**
+
+Space Complexity: **O(n)**
+---
+
+## 🌳 Tree Complexity Summary
+
+| Tree | Search | Insert | Delete | Balanced |
+|------|--------|--------|--------|-----------|
+| Binary Tree | O(n) | O(n) | O(n) | ❌ |
+| BST | O(log n) Avg | O(log n) Avg | O(log n) Avg | ❌ |
+| AVL Tree | O(log n) | O(log n) | O(log n) | ✅ |
+| Red-Black Tree | O(log n) | O(log n) | O(log n) | ✅ |
+| B-Tree | O(log n) | O(log n) | O(log n) | ✅ |
+| B+ Tree | O(log n) | O(log n) | O(log n) | ✅ |
+| Trie | O(m) | O(m) | O(m) | N/A |
+| Segment Tree | O(log n) | O(log n) | O(log n) | N/A |
+| Fenwick Tree | O(log n) | O(log n) | O(log n) | N/A |
+| Heap | O(1)\* | O(log n) | O(log n) | Complete Tree |
+| Splay Tree | O(log n)\* | O(log n)\* | O(log n)\* | Self-adjusting |
+| Treap | O(log n)\* | O(log n)\* | O(log n)\* | Randomized |
+
+> **m = Length of the string (Trie)**  
+> **h = Height of the tree**  
+> **k = Number of elements returned in a range query**  
+> **\* = Amortized / Expected Complexity**
+
+---
 
 ## 🕸️ Graph
 
