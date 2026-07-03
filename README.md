@@ -19,7 +19,7 @@ This repository contains implementations of popular **Data Structures** 🏗️ 
 
 # 🛠️ Topics Covered
 
-## 📊 Time Complexity (Detailed Explanation)
+## 📊 Time Complexity
 
 Time complexity is used to measure how the runtime of an algorithm increases as the input size **n** grows. It helps us evaluate how efficient an algorithm is before actually implementing it.
 
