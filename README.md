@@ -607,12 +607,21 @@ Space Complexity: **O(n)**
 
 ## ↕️ Sorting Algorithms
 
-| Algorithm | Best | Average | Worst | Space |
-|-----------|------|----------|--------|-------|
-| Bubble Sort | O(n) | O(n²) | O(n²) | O(1) |
-| Insertion Sort | O(n) | O(n²) | O(n²) | O(1) |
-| Merge Sort | O(n log n) | O(n log n) | O(n log n) | O(n) |
-| Quick Sort | O(n log n) | O(n log n) | O(n²) | O(log n) |
+## ↕️ Sorting Algorithms
+
+| Algorithm | Best Time | Average Time | Worst Time | Space Complexity |
+|-----------|-----------|--------------|------------|------------------|
+| Bubble Sort | **O(n)** | **O(n²)** | **O(n²)** | **O(1)** |
+| Selection Sort | **O(n²)** | **O(n²)** | **O(n²)** | **O(1)** |
+| Insertion Sort | **O(n)** | **O(n²)** | **O(n²)** | **O(1)** |
+| Merge Sort | **O(n log n)** | **O(n log n)** | **O(n log n)** | **O(n)** |
+| Quick Sort | **O(n log n)** | **O(n log n)** | **O(n²)** | **O(log n)** |
+| Heap Sort | **O(n log n)** | **O(n log n)** | **O(n log n)** | **O(1)** |
+| Shell Sort | **O(n log n)** | **O(n^1.5)** | **O(n²)** | **O(1)** |
+| Counting Sort | **O(n + k)** | **O(n + k)** | **O(n + k)** | **O(n + k)** |
+| Radix Sort | **O(d(n + k))** | **O(d(n + k))** | **O(d(n + k))** | **O(n + k)** |
+| Bucket Sort | **O(n + k)** | **O(n + k)** | **O(n²)** | **O(n + k)** |
+| Tree Sort | **O(n log n)** | **O(n log n)** | **O(n²)** | **O(n)** |
 
 ---
 
@@ -645,6 +654,50 @@ Space Complexity: **O(n)**
 | Average | **O(n + m)** |
 | Worst | **O(nm)** |
 | Space | **O(1)** |
+
+---
+
+# 🌟Dynamic Programming (Important Problems)
+
+| Problem | Time Complexity | Space Complexity |
+|---------|-----------------|------------------|
+| Fibonacci | **O(n)** | **O(1)** |
+| Climbing Stairs | **O(n)** | **O(1)** |
+| Frog Jump | **O(n)** | **O(1)** |
+| House Robber | **O(n)** | **O(1)** |
+| House Robber II | **O(n)** | **O(1)** |
+| Unique Paths | **O(m × n)** | **O(n)** |
+| Unique Paths II | **O(m × n)** | **O(n)** |
+| Minimum Path Sum | **O(m × n)** | **O(n)** |
+| Triangle | **O(n²)** | **O(n)** |
+| Maximum Falling Path Sum | **O(n²)** | **O(n)** |
+| Subset Sum | **O(n × sum)** | **O(sum)** |
+| Partition Equal Subset Sum | **O(n × sum)** | **O(sum)** |
+| 0/1 Knapsack | **O(n × W)** | **O(W)** |
+| Unbounded Knapsack | **O(n × W)** | **O(W)** |
+| Coin Change (Minimum Coins) | **O(n × amount)** | **O(amount)** |
+| Coin Change II | **O(n × amount)** | **O(amount)** |
+| Longest Common Subsequence (LCS) | **O(m × n)** | **O(n)** |
+| Longest Common Substring | **O(m × n)** | **O(m × n)** |
+| Longest Palindromic Subsequence | **O(n²)** | **O(n²)** |
+| Edit Distance | **O(m × n)** | **O(m × n)** |
+| Longest Increasing Subsequence (LIS) | **O(n log n)** | **O(n)** |
+| Matrix Chain Multiplication (MCM) | **O(n³)** | **O(n²)** |
+| Burst Balloons | **O(n³)** | **O(n²)** |
+| Palindrome Partitioning II | **O(n²)** | **O(n²)** |
+| Partition Array for Maximum Sum | **O(n × k)** | **O(n)** |
+| Stock Buy & Sell I | **O(n)** | **O(1)** |
+| Stock Buy & Sell II | **O(n)** | **O(1)** |
+| Stock Buy & Sell III | **O(n)** | **O(1)** |
+| Stock Buy & Sell IV | **O(n × k)** | **O(k)** |
+| Stock with Cooldown | **O(n)** | **O(1)** |
+
+> **n** = Number of elements  
+> **m** = Rows / Length of first string  
+> **W** = Knapsack Capacity  
+> **sum** = Target Sum  
+> **amount** = Coin Amount  
+> **k** = Transactions / Partition Size
 
 ---
 
