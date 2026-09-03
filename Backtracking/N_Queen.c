@@ -1,6 +1,6 @@
 #include<stdio.h>
 
-#define N 4 // board size and no of queen
+#define N 4 // board size and no of queen it can change
 
 // Function to check if placing a queen at board[row][col] is safe
 int isSafe(char board[N][N], int row, int col) {
