@@ -1,25 +1,32 @@
 class DirectedGraph:
-    # the dictionary will store the value like :
-        #  A -> ['B', 'C']
-        #  B -> ['A', 'D']
-        #  C -> ['A', 'D']
-        #  D -> ['B', 'C']
+
     def __init__(self):
         self.graph = {}
 
+    # u is the source and v is the destination
     def addEdge(self, u, v):
-        # if the Vertex is not present add it in the dict
-        if v not in self.graph:
-            self.graph[v] = []
+        if u not in self.graph:
+            # creating a empty vertex if not present
+            self.graph[u] = []
 
-        self.graph[v].append(u) # add the Edges to the V1->V2
+        #  connecting with  vertex
+        self.graph[u].append(v)
 
-    def display(self):
+    def printGraph(self):
         for vertex in self.graph:
-            print(vertex, "->", self.graph[vertex])
+            print(f"{vertex} -> {self.graph[vertex]}")
 
 
-g = DirectedGraph()
+graph = DirectedGraph()
 
-g.addEdge(1,2)
-g.display()
+graph.addEdge(1,2)
+graph.addEdge(2,5)
+graph.addEdge(2,6)
+graph.addEdge(3,1)
+graph.addEdge(4,1)
+graph.addEdge(4,3)
+graph.addEdge(5,6)
+graph.addEdge(6,4)
+
+
+graph.printGraph()
