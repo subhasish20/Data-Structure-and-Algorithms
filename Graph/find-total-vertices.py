@@ -18,12 +18,7 @@ class Graph:
             print(f"{vertex} - > {self.graph[vertex]}")
 
     def find_total_vertex(self):
-        vertices = []
-        for vertex in self.graph:
-            if self.graph[vertex] not in vertices:
-                vertices.extend([vertex])
-
-        print(f"total number of vertices is {len(vertices)} vertex are {vertices}")
+        print(f"total number of vertices is {list(self.graph.keys())}")
 
 graph = Graph()
 
