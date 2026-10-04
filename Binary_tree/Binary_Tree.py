@@ -21,3 +21,49 @@ class BinaryTree:
         self.newNode = Node(key)
 
         return self.newNode
+
+    def insert_at_left(self, key : int , root : Node) -> Node:
+        """
+         we will take the key that will insert in the left.
+         if the root is not created then we will make that as root node else we will insert it in the left side.
+        """
+        if root is None:
+            root = self.create_node(root)
+        else:
+            root.left = self.create_node(key)
+
+        return root
+
+    def insert_at_right(self, key : int ,root : Node ) -> Node:
+        """
+         we will take the key that will insert in the right.
+         if the root is not created then we will make that as root node else we will insert it in the right side.
+        """
+        if root is None:
+            root = self.create_node(key)
+        else:
+            root.right = self.create_node(key)
+
+        return root
+
+    def inroder(self, root : Node):
+        if root is None:
+            return
+
+        self.inroder(root.left)
+        print(root.data)
+        self.inroder(root.right)
+
+    def postorder(self, root : Node):
+        pass
+
+
+tree = BinaryTree()
+
+
+root = tree.create_node(20)
+
+tree.insert_at_left(15, root)
+tree.insert_at_right(25,root)
+
+tree.inroder(root)
