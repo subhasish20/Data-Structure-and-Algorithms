@@ -1,5 +1,4 @@
 
-
 class Node:
     def __init__ (self,key) -> None:
 
@@ -14,18 +13,11 @@ class Node:
 
 
 
-def Create_Node(key)-> Node:
-    node = Node(key)
-
-    return node
+class BinaryTree:
 
 
+    def create_node(self, key) -> Node:
 
+        self.newNode = Node(key)
 
-
-
-root = Create_Node(10)
-
-root.left = Create_Node(5)
-
-print(root.data, "\n", root.left.data)
+        return self.newNode
