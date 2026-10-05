@@ -28,7 +28,7 @@ class BinaryTree:
          if the root is not created then we will make that as root node else we will insert it in the left side.
         """
         if root is None:
-            root = self.create_node(root)
+            root = self.create_node(key)
         else:
             root.left = self.create_node(key)
 
@@ -46,16 +46,29 @@ class BinaryTree:
 
         return root
 
-    def inroder(self, root : Node):
+    def preorder(self, root : Node):
         if root is None:
             return
 
-        self.inroder(root.left)
         print(root.data)
-        self.inroder(root.right)
+        self.preorder(root.left)
+        self.preorder(root.right)
+
+    def inoroder(self, root : Node):
+        if root is None:
+            return
+
+        self.inoroder(root.left)
+        print(root.data)
+        self.inoroder(root.right)
 
     def postorder(self, root : Node):
-        pass
+        if root is None :
+            return
+
+        self.postorder(root.left)
+        self.postorder(root.right)
+        print(root.data)
 
 
 tree = BinaryTree()
@@ -66,4 +79,9 @@ root = tree.create_node(20)
 tree.insert_at_left(15, root)
 tree.insert_at_right(25,root)
 
-tree.inroder(root)
+print("Inorder :")
+tree.inoroder(root)
+print("Preorder :")
+tree.preorder(root)
+print("Postorder :  ")
+tree.postorder(root)
