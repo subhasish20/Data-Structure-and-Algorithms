@@ -1,23 +1,30 @@
 
-class LLNode:
-    def __init__ (self, key: int) -> None:
-        """
-        Represents a node in the binary tree.
-        """
-        self.left_node = None
-        self.data = key
-        self.right_node = None
+class TreeNode:
+    """
+    Represent a single node of a binary tree.
+
+    Attributes:
+        left_node: References the left child, or None if no left child exists.
+        data: Stores the value of the node.
+        right_node: References the right child, or None if no right child exists.
+    """
+
+    def __init__(self, key: int) -> None:
+        """Initialize a node with the given value and no children."""
+        self.left_node: TreeNode | None = None
+        self.data: int = key
+        self.right_node: TreeNode | None = None
 
 
 class BinaryTree:
 
-    def create_node(self, key: int) -> LLNode:
+    def create_node(self, key: int) -> TreeNode:
         """
         Create and return a new binary tree node.
         """
-        return LLNode(key)
+        return TreeNode(key)
 
-    def insert_at_left(self, key: int, root_node: LLNode) -> LLNode:
+    def insert_at_left(self, key: int, root_node: TreeNode) -> TreeNode:
         """
         Insert a new node as the left child of root_node.
 
@@ -30,7 +37,7 @@ class BinaryTree:
 
         return root_node
 
-    def insert_at_right(self, key: int, root_node: LLNode) -> LLNode:
+    def insert_at_right(self, key: int, root_node: TreeNode) -> TreeNode:
         """
         Insert a new node as the right child of root_node.
 
@@ -43,7 +50,10 @@ class BinaryTree:
 
         return root_node
 
-    def preorder(self, root_node: LLNode) -> None:
+    def delete_node(self, key : int, root_node : TreeNode) -> TreeNode:
+        pass
+
+    def preorder(self, root_node: TreeNode) -> None:
         """
         Preorder traversal:
         Root -> Left -> Right
@@ -55,7 +65,7 @@ class BinaryTree:
         self.preorder(root_node.left_node)
         self.preorder(root_node.right_node)
 
-    def inorder(self, root_node: LLNode) -> None:
+    def inorder(self, root_node: TreeNode) -> None:
         """
         Inorder traversal:
         Left -> Root -> Right
@@ -67,7 +77,7 @@ class BinaryTree:
         print(root_node.data)
         self.inorder(root_node.right_node)
 
-    def postorder(self, root_node: LLNode) -> None:
+    def postorder(self, root_node: TreeNode) -> None:
         """
         Postorder traversal:
         Left -> Right -> Root
